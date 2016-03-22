@@ -7,33 +7,32 @@
     <small><%= @place.user.email %></small>
   <% end %>
 
+  <% if @place.latitude.present? && @place.longitude.present? %>
+    <script>
 
-<style>
-  #map {
-    height: 300px;
-  }
-</style>
+      function initMap() {
+        var myLatLng = {lat: <%= @place.latitude %>, lng: <%= @place.longitude %>};
 
-  <script>
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 12,
+          center: myLatLng
+        });
 
-  function initMap() {
-    var myLatLng = {lat: -25.363, lng: 131.044};
+        var marker = new google.maps.Marker({
+          position: myLatLng,
+          map: map,
+          title: 'Hello World!'
+        });
+      }
 
-    var map = new google.maps.Map(document.getElementById('map'), {
-      zoom: 4,
-      center: myLatLng
-    });
+      </script>
+      <script async defer
+            src="https://maps.googleapis.com/maps/api/js?signed_in=true&callback=initMap"></script>
 
-    var marker = new google.maps.Marker({
-      position: myLatLng,
-      map: map,
-      title: 'Hello World!'
-    });
-  }
+      <div id="map"></div>
+  <% end %>
 
-  </script>
-  <script async defer
-        src="https://maps.googleapis.com/maps/api/js?signed_in=true&callback=initMap"></script>
+  <br />
 
   <div class='pull-right'>
     <% if current_user && current_user == @place.user %>
