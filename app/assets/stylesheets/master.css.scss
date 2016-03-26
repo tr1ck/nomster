@@ -34,6 +34,34 @@
   clear: both;
 }
 
+.modal-header-comment {
+  background-color: #428bca;
+  height: 56px;
+  color: #ffffff;
+  padding-top: 1em;
+  padding-left: 10px;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+.modal-header-photo {
+  background-color: #5cb85c;
+  height: 56px;
+  color: #ffffff;
+  padding-top: 1em;
+  padding-left: 10px;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+.buttons {
+  margin-right: 150px;
+}
+
+.comment-button {
+  padding-right: 10px;
+}
+
 #map {
   height: 300px;
 }
@@ -51,12 +79,16 @@ body {
 }
 
 blockquote {
-  background: #f9f9f9;
-  border-left: 10px solid #54e3e3;
-  margin: 1.5em 10px;
-  padding: 0.5em 10px;
+  background: #ffffff;
   quotes: "\201C""\201D""\2018""\2019";
+  -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
+  -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
+  box-shadow: 1px 1px 2px 0 #d0d0d0;
+  border: 1px solid #ccc;
+  border-color: #e4e4e4 #bebebd #bebebd #54e3e3;
+  border-left-width: 10px;
 }
+
 blockquote:before {
   color: #54e3e3;
   content: open-quote;
@@ -65,6 +97,7 @@ blockquote:before {
   margin-right: 0.25em;
   vertical-align: -0.4em;
 }
+
 blockquote p {
   display: inline;
 }
