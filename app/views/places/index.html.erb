@@ -46,7 +46,7 @@
     <% if place.user.present? %>
       <small><%= place.user.email %></small>
     <% end %>
-    <div class="clear"></div>
+    <div class="clear"></div><br /><br />
 
     <% if place.comments.present? %>
       <div class="col-xs-12">
@@ -59,7 +59,7 @@
         </blockquote>
       </div>
     <% end %>
-    <div class="clear"></div>
+    <div class="clear"></div><br /><br />
 
     <% if place.photos.present? && place.photos.last.picture.present? %>
       <div class="place-photo col-xs-12 col-sm-4">
