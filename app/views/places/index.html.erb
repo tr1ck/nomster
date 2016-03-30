@@ -60,7 +60,7 @@
     <% end %>
 
     <% if place.photos.present? && place.photos.last.picture.present? %>
-      <div class="col-xs-12">
+      <div class="place-photo col-xs-12">
         <%= image_tag place.photos.order("id ASC").last.picture %>
       </div>
     <% end %>

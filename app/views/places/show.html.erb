@@ -127,7 +127,9 @@
 
 <% @place.photos.each do |photo| %>
   <div class="booyah-box col-xs-12 col-sm-5 col-sm-offset-1">
-    <%= image_tag photo.picture %>
+    <div class="place-photo">
+      <%= image_tag photo.picture %>
+    </div>
     <div class="clear"></div>
     <%= photo.caption %>
   </div>
